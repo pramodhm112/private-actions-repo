@@ -21,8 +21,11 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Check PWD
-        run: pwd
-      
+        run: |
+          pwd
+          whoami
+          ls -la
+          
       - name: Copy Actions
         run: cp -r /home/pramodhmstar/actions .
         
