@@ -29,10 +29,10 @@ jobs:
       - name: Copy Actions
         run: |
           ls -la
-        #cp -r /home/pramodhmstar/actions .
-        #cd actions
+          cp -r /home/pramodhmstar/actions .
+          cd actions
+          ls -la
            
-        
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: ./actions/checkout
 
