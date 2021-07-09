@@ -26,11 +26,11 @@ jobs:
           whoami
           ls -la
           
-      - name: Copy Actions
-        run: cp -r /home/pramodhmstar/actions .
+      #- name: Copy Actions
+      #  run: cp -r /home/pramodhmstar/actions .
         
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: ./actions/checkout
+      - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
