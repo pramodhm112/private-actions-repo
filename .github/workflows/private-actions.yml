@@ -27,8 +27,6 @@ jobs:
         run: cp -r /home/pramodhmstar/actions .
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: ./actions/checkout
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
