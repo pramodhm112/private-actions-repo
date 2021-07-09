@@ -30,7 +30,7 @@ jobs:
         run: |
           ls -la
           cp -r /home/pramodhmstar/actions .
-          cd actions
+          cd actions/checkout/dist
           ls -la
            
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
