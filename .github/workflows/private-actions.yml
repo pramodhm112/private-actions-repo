@@ -20,19 +20,13 @@ jobs:
     # 
 
     # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      - name: Check PWD
-        run: |
-          pwd
-          whoami
-          ls -la
-          
+    steps:         
       - name: Copy Actions
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
         run: |
-          ls -la
-          cp -r /home/pramodhmstar/actions .
-          cd actions/checkout/dist
-          ls -la
+          cp -r ~/actions .
+          matcher_path=$GITHUB_WORKSPACE/actions/problem-matcher.json
            
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: ./actions/checkout
